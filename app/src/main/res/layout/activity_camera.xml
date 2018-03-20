@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.edu.pwr.student.contractsummaryapp.CameraActivity">
+
+    <ImageView
+        android:id="@+id/currentImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="29dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/nextPageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/endOfDocumentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="30dp"
+        android:text="koniec"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextPageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="30dp" />
+
+    <Button
+        android:id="@+id/nextPageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="kolejna strona"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/endOfDocumentButton"
+        app:layout_constraintTop_toBottomOf="@+id/currentImage" />
+
+    <Button
+        android:id="@+id/firstPageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="pierwsza strona"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/currentImage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="15dp" />
+</android.support.constraint.ConstraintLayout>
